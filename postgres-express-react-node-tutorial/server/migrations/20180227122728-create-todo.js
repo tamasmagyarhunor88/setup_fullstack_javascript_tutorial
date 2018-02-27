@@ -8,7 +8,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {
@@ -19,6 +19,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-    });
+    }),
   down: (queryInterface, /* Sequelize */ ) => queryInterface.dropTable('Todos'),
 };

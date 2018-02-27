@@ -5,14 +5,14 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       content: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
         allowNull: false,
       },
       complete: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
       createdAt: {
@@ -21,7 +21,7 @@ module.exports = {
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       todoId: {
         type: Sequelize.INTEGER,
@@ -32,7 +32,7 @@ module.exports = {
           as: 'todoId',
         },
       },
-    });
+    }),
   down: (queryInterface, /* Sequelize */) =>
     queryInterface.dropTable('TodoItems'),
 };
